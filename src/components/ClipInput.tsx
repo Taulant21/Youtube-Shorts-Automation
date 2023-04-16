@@ -75,7 +75,7 @@ export function ClipInput({ onClip }: Props) {
             value={rawClipURL}
             onChange={handleRawClipURLInputChange}
             className="bg-gray-800 text-white px-3 py-2 rounded-md w-full"
-            placeholder="clips.twitch.tv"
+            placeholder="https://www.twitch.tv/user/clip"
           />
           <button
             disabled={loading}
