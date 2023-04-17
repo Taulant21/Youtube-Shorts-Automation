@@ -99,7 +99,7 @@ export default function Home() {
           )}
           <div className="w-1/2 mt-12 flex justify-between">
             <button onClick={() => setPosition("west")}>Left Position</button>
-            {`Position of video is: ${position}`}
+           <div className="PositionText">{`Position of video is: ${position}`}</div>
             <button onClick={() => setPosition("east")}>Right Position</button>
           </div>
           {finalLink !== "" && (
