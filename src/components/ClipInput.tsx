@@ -2,7 +2,6 @@ import { getTwitchClipID } from "@/utils/get-twitch-clip-id";
 import { Clip, ClipURL } from "@/types";
 import { useState } from "react";
 import { getClipSourceURL } from "@/services/get-clip-source-url";
-import { DEMO_CLIP_URLS } from "@/constants/demo-clips";
 import { Loader } from "./shared/Loader";
 
 type Props = {
@@ -59,11 +58,6 @@ export function ClipInput({ onClip }: Props) {
           Your Twitch clip URL
         </label>
         <div className="flex justify-start items-center">
-          <datalist id="demo-clips-list">
-            {DEMO_CLIP_URLS.map(({ id, url }) => (
-              <option key={id} value={url}></option>
-            ))}
-          </datalist>
           <input
             autoComplete="off"
             list="demo-clips-list"
