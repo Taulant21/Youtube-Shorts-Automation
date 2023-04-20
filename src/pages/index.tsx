@@ -55,6 +55,12 @@ export default function Home() {
     return finalVideoLink;
   };
 
+  const LoaderCheck = () => {
+     console.log("Reloading Website")
+     window.location.reload(); 
+
+  }
+
   useEffect(() => {
     if (clipPublicID !== null) {
       const link = getFinalLink({ clipPublicID, videoConfig });
@@ -65,6 +71,7 @@ export default function Home() {
   useEffect(() => {
     const finalStep = async () => {
       await uploadVideoYotube({clip, videoLink: finalLink, setLoader})
+      LoaderCheck()
     }
 
     if(finalLink !== '') {
@@ -73,6 +80,7 @@ export default function Home() {
   }, [finalLink, clip])
 
   console.log(finalLink);
+
 
   const handleOnVideoConfig = (config: VideoConfig) => {
     setVideoConfig(config);
