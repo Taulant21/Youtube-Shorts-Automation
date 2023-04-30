@@ -77,6 +77,14 @@ export default function Home() {
   const handleOnVideoConfig = (config: VideoConfig) => {
     setVideoConfig(config);
   };
+  // Basically added a check so if loader is true which always is and then is finalLink isn't blank then refresh
+  useEffect(() => {
+     
+    if (loader == true && finalLink !=="") {
+      window.location.reload()
+    }
+     
+  },[finalLink, loader]);
 
   return (
     <>
