@@ -80,7 +80,7 @@ export default function Home() {
   // Basically added a check so if loader is true which always is and then is finalLink isn't blank then refresh
   useEffect(() => {
      
-    if (loader == true && finalLink !=="") {
+    if (!loader && finalLink !=="") {
       window.location.reload()
     }
      
